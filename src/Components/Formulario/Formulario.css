@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+form input,
+form select {
+  margin-bottom: 10px;
+  padding: 3px 0px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: #7cb2db24;
+}
+
+#submit-button {
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  background: #9e9ecb;
+  box-shadow: 0px 0px 5px -3px;
+}
+
+span {
+  text-align: center;
+}

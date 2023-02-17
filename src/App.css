@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  width: 900px;
+  justify-content: space-around;
+  padding: 35px 0px;
+}
+
+.booking-title {
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+}

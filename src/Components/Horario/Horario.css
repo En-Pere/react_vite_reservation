@@ -1,0 +1,15 @@
+.horario-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+}
+
+.horario-horario p {
+  padding: 10px 0px;
+  font-style: italic;
+}
+
+.horario-name {
+  font-size: 20px;
+}
