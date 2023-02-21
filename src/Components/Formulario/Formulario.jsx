@@ -8,16 +8,28 @@ function Formulario() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   console.log(errors);
-  // };
+
+  const onSubmit = (data) => {
+    fetch("https://formsubmit.co/ajax/pereruba@hotmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
+
+  const minDate = new Date().toISOString().split("T")[0];
 
   return (
     <form
-      // onSubmit={handleSubmit(onSubmit)}
-      action="https://formsubmit.co/pereruba@hotmail.com"
-      method="POST"
+      onSubmit={handleSubmit(onSubmit)}
+      // action="https://formsubmit.co/pereruba@hotmail.com"
+      // method="POST"
     >
       <label>Nombre Completo</label>
       <input
@@ -54,6 +66,7 @@ function Formulario() {
       <label>Fecha</label>
       <input
         type="date"
+        min={minDate}
         placeholder="fecha"
         {...register("date", {
           required: true,
