@@ -8,19 +8,27 @@ function Formulario() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  // const onSubmit = (data) => {
+  //   console.log(data);
+  //   console.log(errors);
+  // };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      // onSubmit={handleSubmit(onSubmit)}
+      action="https://formsubmit.co/pereruba@hotmail.com"
+      method="POST"
+    >
       <label>Nombre Completo</label>
       <input
         type="text"
+        required
         {...register("firstname", { required: true, maxLength: 80 })}
       />
       <label>Email</label>
       <input
         type="text"
+        required
         {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
       />
       <label>Teléfono</label>
@@ -53,7 +61,6 @@ function Formulario() {
           maxLength: 12,
         })}
       />
-
       <label>Horario Reserva</label>
       <select {...register("hour", { required: true })}>
         <option value="12:00">12:00</option>
@@ -67,7 +74,9 @@ function Formulario() {
         <option value="22:00">22:00</option>
       </select>
       <span>
-        <input type="submit" id="submit-button" />
+        <button type="submit" id="submit-button">
+          Enviar
+        </button>
       </span>
     </form>
   );

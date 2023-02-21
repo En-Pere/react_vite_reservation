@@ -1,8 +1,9 @@
 .horario-container {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 200px;
   text-align: center;
+  padding: 0px 10px;
 }
 
 .horario-horario p {

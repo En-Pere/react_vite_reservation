@@ -5,13 +5,14 @@
 
 .App {
   display: flex;
-  width: 900px;
   justify-content: space-around;
   padding: 35px 0px;
+  flex-wrap: wrap;
 }
 
 .booking-title {
   display: flex;
   justify-content: center;
   font-size: 45px;
+  text-align: center;
 }
